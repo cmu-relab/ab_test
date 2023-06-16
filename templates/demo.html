@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+{% block title %}Privacy Settings{% endblock %}
+{% block content %}
+
+<div class="container w-50">
+  <div class="row text-center mt-4">
+    <p><b>Demographic Questions.</b> This is the last page, please compelete the survey below. When you are finished, click Submit.</p>
+  </div>
+  
+  <div class="row">
+    <form action="/finish" method="post">
+      <input type="hidden" name="session" value="{{ session }}">
+      
+      <div class="container">
+	<div class="row mt-3">
+	  <div class="col">
+	    <b>1. Which category below includes your age?</b>
+	    <p class="mb-1 mt-2">
+	      <input type="radio" name="age" value="17 or younger">
+	      <label>17 or younger</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="age" value="18-20">
+	      <label>18-20</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="age" value="21-29">
+	      <label>21-29</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="age" value="30-39">
+	      <label>30-39</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="age" value="40-49">
+	      <label>40-49</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="age" value="50-59">
+	      <label>50-59</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="age" value="60 or older">
+	      <label>60 or older</label>
+	    </p>	    
+	    <p class="mb-1">
+	      <input type="radio" name="age" value="None">
+	      <label>Prefer not to answer</label>
+	    </p>	    
+	  </div>
+	</div>
+      
+	<div class="row mt-3">
+	  <div class="col">
+	    <b>2. What is your ethnicity?</b>
+	    <p class="mb-1 mt-2">
+	      <input type="checkbox" name="race" value="White">
+	      <label>White</label>
+	    </p>
+	    <p class="mb-1 mt-2">
+	      <input type="checkbox" name="race" value="Hispanic or Latino">
+	      <label>Hispanic or Latino</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="checkbox" name="race" value="Black or African American">
+	      <label>Black or African American</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="checkbox" name="race" value="American Indian or Alaskan Native">
+	      <label>American Indian or Alaskan Native</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="checkbox" name="race" value="Asian">
+	      <label>Asian</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="checkbox" name="race" value="Native Hawaiian or other Pacific Islander">
+	      <label>Native Hawaiian or other Pacific Islander</label>
+	    </p>
+	  </div>
+	</div>
+
+	<div class="row mt-3">
+	  <div class="col">
+	    <b>3. What is your gender?</b>
+	    <p class="mb-1 mt-2">
+	      <input type="radio" name="gender" value="Male">
+	      <label>Male</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="gender" value="Female">
+	      <label>Female</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="gender" value="None">
+	      <label>Prefer not to answer</label>
+	    </p>
+	  </div>
+	</div>
+
+	<div class="row mt-3">
+	  <div class="col">
+	    <b>4. What is your level of education?</b>
+	    <p class="mb-1 mt-2">
+	      <input type="radio" name="education" value="Some high school">
+	      <label>Less than high school degree</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="education" value="High school or equivalent">
+	      <label>High school degree or equivalent</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="education" value="Some college">
+	      <label>Some college, but no degree</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="education" value="Associate degree">
+	      <label>Associate degree</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="education" value="Bachelor degree">
+	      <label>Bachelor degree</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="education" value="Masters degree">
+	      <label>Masters degree</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="education" value="Doctorate degree">
+	      <label>Doctorate degree</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="education" value="None">
+	      <label>Prefer not to answer</label>
+	    </p>
+	  </div>
+	</div>
+
+	<div class="row mt-3">
+	  <div class="col">
+	    <b>5. What is your level of income?</b>
+	    <p class="mb-1 mt-2">
+	      <input type="radio" name="income" value="Less than $10,000">
+	      <label>Less than $10,000</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="income" value="10,000 - 19,999">
+	      <label>10,000 - 19,999</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="income" value="20,000 - 29,999">
+	      <label>20,000 - 29,999</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="income" value="30,000 - 39,999">
+	      <label>30,000 - 39,999</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="income" value="40,000 - 49,999">
+	      <label>40,000 - 49,999</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="income" value="50,000 - 59,999">
+	      <label>50,000 - 59,999</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="income" value="60,000 - 69,999">
+	      <label>60,000 - 69,999</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="income" value="70,000 - 79,999">
+	      <label>70,000 - 79,999</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="income" value="80,000 - 89,999">
+	      <label>80,000 - 89,999</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="income" value="90,000 - 99,999">
+	      <label>90,000 - 99,999</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="income" value="100,000 or higher">
+	      <label>100,000 or higher</label>
+	    </p>
+	    <p class="mb-1">
+	      <input type="radio" name="income" value="None">
+	      <label>Prefer not to answer</label>
+	    </p>
+	  </div>
+	</div>
+
+      </div>
+      
+      <div class="row text-end mt-3">
+	<input class="btn btn-primary mb-3" type="submit" value="Submit">
+      </div>
+  </div>
+  </form>
+
+</div>
+{% endblock %}
